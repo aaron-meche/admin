@@ -1,0 +1,32 @@
+{
+  "name": "rue",
+  "version": "1.0.0",
+  "description": "rue programming language",
+  "main": "rue/system/server.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "nodemon rue/bodies/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaron-meche/rue-language.git"
+  },
+  "keywords": [
+    "rue",
+    "programming",
+    "language",
+    "user",
+    "interface",
+    "website",
+    "web"
+  ],
+  "author": "aaron meche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaron-meche/rue-lang/issues"
+  },
+  "homepage": "https://github.com/aaron-meche/rue-lang#readme"
+}

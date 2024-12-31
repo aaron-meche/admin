@@ -1,0 +1,24 @@
+
+
+
+
+Grid
+    grid-column: auto min-content
+    background: var(--l1)
+    padding: 12pt 16pt
+    size: 10pt
+
+    Text: Finances
+        @onclick: openPage("/")
+        weight: 500
+        letter-spacing: 0.2pt
+
+    HStack
+        gap: 8pt
+
+        Text: Overview
+            @onclick: openPage("/")
+        Text: Credit Cards
+            @onclick: openPage("/credit-cards")
+        Text: Loans & Bills
+            @onclick: openPage("/loans")

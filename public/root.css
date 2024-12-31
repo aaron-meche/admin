@@ -1,0 +1,230 @@
+@font-face {
+    font-family: BaileyScript;
+    src: url('./Roboto/Roboto-Light.ttf') format('opentype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: BaileyScript;
+    src: url('./Roboto/Roboto-Thin.ttf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: BaileyScript;
+    src: url('./Roboto/Roboto-Regular.ttf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: BaileyScript;
+    src: url('./Roboto/Roboto-Medium.ttf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: BaileyScript;
+    src: url('./Roboto/Roboto-Bold.ttf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: BaileyScript;
+    src: url('./Roboto/Roboto-Black.ttf') format('opentype');
+    font-weight: 700;
+}
+
+:root {
+    --red: hsl(0, 80%, 50%);
+    --orange: hsl(30, 80%, 50%);
+    --yellow: hsl(60, 80%, 40%);
+    --green: hsl(120, 80%, 40%);
+    --blue: hsl(240, 80%, 55%);
+    --purple: hsl(270, 80%, 45%);
+    --magenta: hsl(300, 80%, 40%);
+
+    --fullOffset: 6%;
+
+    --background: hsl(0, 0%, calc(0% + var(--fullOffset)));
+    --l1: hsl(0, 0%, calc(0% + (var(--fullOffset) * 2)));
+    --l2: hsl(0, 0%, calc(0% + (var(--fullOffset) * 3)));
+    --l3: hsl(0, 0%, calc(0% + (var(--fullOffset) * 4)));
+
+    --content: hsl(0, 0%, calc(100% - var(--fullOffset)));
+
+    --inline-moat: 6rem;
+}
+
+body {
+    margin: 0;
+    font-size: 14pt;
+    font-family: BaileyScript;
+    background: var(--background);
+    color: var(--content);
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+}
+
+/* --primary25: hsl(100, 0%, 0%, 0.25);
+--content25: hsl(100, 0%, 96%, 0.25);
+--accent25: hsl(100, 50%, 30%, 0.25);
+--good25: hsl(120, 50%, 40%, 0.25);
+--bad25: hsl(0, 50%, 40%, 0.25);
+--primary50: hsl(100, 0%, 0%, 0.5);
+--content50: hsl(100, 0%, 96%, 0.5);
+--accent50: hsl(100, 50%, 30%, 0.5);
+--good50: hsl(120, 50%, 40%, 0.5);
+--bad50: hsl(0, 50%, 40%, 0.5);
+--primary75: hsl(100, 0%, 0%, 0.75);
+--content75: hsl(100, 0%, 96%, 0.75);
+--accent75: hsl(100, 50%, 30%, 0.75);
+--good75: hsl(120, 50%, 40%, 0.75);
+--bad75: hsl(0, 50%, 40%, 0.75);
+--primary: hsl(100, 0%, 0%, 1);
+--content: hsl(100, 0%, 96%, 1);
+--accent: hsl(100, 50%, 30%, 1);
+--good: hsl(120, 50%, 40%, 1);
+--bad: hsl(0, 50%, 40%, 1);
+--primary125: hsl(100, 0%, 4%, 0.25);
+--content125: hsl(100, 0%, 100%, 0.25);
+--accent125: hsl(100, 50%, 34%, 0.25);
+--good125: hsl(120, 50%, 44%, 0.25);
+--bad125: hsl(0, 50%, 44%, 0.25);
+--primary150: hsl(100, 0%, 4%, 0.5);
+--content150: hsl(100, 0%, 100%, 0.5);
+--accent150: hsl(100, 50%, 34%, 0.5);
+--good150: hsl(120, 50%, 44%, 0.5);
+--bad150: hsl(0, 50%, 44%, 0.5);
+--primary175: hsl(100, 0%, 4%, 0.75);
+--content175: hsl(100, 0%, 100%, 0.75);
+--accent175: hsl(100, 50%, 34%, 0.75);
+--good175: hsl(120, 50%, 44%, 0.75);
+--bad175: hsl(0, 50%, 44%, 0.75);
+--primary1: hsl(100, 0%, 4%, 1);
+--content1: hsl(100, 0%, 100%, 1);
+--accent1: hsl(100, 50%, 34%, 1);
+--good1: hsl(120, 50%, 44%, 1);
+--bad1: hsl(0, 50%, 44%, 1);
+--primary225: hsl(100, 0%, 8%, 0.25);
+--content225: hsl(100, 0%, 104%, 0.25);
+--accent225: hsl(100, 50%, 38%, 0.25);
+--good225: hsl(120, 50%, 48%, 0.25);
+--bad225: hsl(0, 50%, 48%, 0.25);
+--primary250: hsl(100, 0%, 8%, 0.5);
+--content250: hsl(100, 0%, 104%, 0.5);
+--accent250: hsl(100, 50%, 38%, 0.5);
+--good250: hsl(120, 50%, 48%, 0.5);
+--bad250: hsl(0, 50%, 48%, 0.5);
+--primary275: hsl(100, 0%, 8%, 0.75);
+--content275: hsl(100, 0%, 104%, 0.75);
+--accent275: hsl(100, 50%, 38%, 0.75);
+--good275: hsl(120, 50%, 48%, 0.75);
+--bad275: hsl(0, 50%, 48%, 0.75);
+--primary2: hsl(100, 0%, 8%, 1);
+--content2: hsl(100, 0%, 104%, 1);
+--accent2: hsl(100, 50%, 38%, 1);
+--good2: hsl(120, 50%, 48%, 1);
+--bad2: hsl(0, 50%, 48%, 1);
+--primary325: hsl(100, 0%, 12%, 0.25);
+--content325: hsl(100, 0%, 108%, 0.25);
+--accent325: hsl(100, 50%, 42%, 0.25);
+--good325: hsl(120, 50%, 52%, 0.25);
+--bad325: hsl(0, 50%, 52%, 0.25);
+--primary350: hsl(100, 0%, 12%, 0.5);
+--content350: hsl(100, 0%, 108%, 0.5);
+--accent350: hsl(100, 50%, 42%, 0.5);
+--good350: hsl(120, 50%, 52%, 0.5);
+--bad350: hsl(0, 50%, 52%, 0.5);
+--primary375: hsl(100, 0%, 12%, 0.75);
+--content375: hsl(100, 0%, 108%, 0.75);
+--accent375: hsl(100, 50%, 42%, 0.75);
+--good375: hsl(120, 50%, 52%, 0.75);
+--bad375: hsl(0, 50%, 52%, 0.75);
+--primary3: hsl(100, 0%, 12%, 1);
+--content3: hsl(100, 0%, 108%, 1);
+--accent3: hsl(100, 50%, 42%, 1);
+--good3: hsl(120, 50%, 52%, 1);
+--bad3: hsl(0, 50%, 52%, 1);
+--primary425: hsl(100, 0%, 16%, 0.25);
+--content425: hsl(100, 0%, 112%, 0.25);
+--accent425: hsl(100, 50%, 46%, 0.25);
+--good425: hsl(120, 50%, 56%, 0.25);
+--bad425: hsl(0, 50%, 56%, 0.25);
+--primary450: hsl(100, 0%, 16%, 0.5);
+--content450: hsl(100, 0%, 112%, 0.5);
+--accent450: hsl(100, 50%, 46%, 0.5);
+--good450: hsl(120, 50%, 56%, 0.5);
+--bad450: hsl(0, 50%, 56%, 0.5);
+--primary475: hsl(100, 0%, 16%, 0.75);
+--content475: hsl(100, 0%, 112%, 0.75);
+--accent475: hsl(100, 50%, 46%, 0.75);
+--good475: hsl(120, 50%, 56%, 0.75);
+--bad475: hsl(0, 50%, 56%, 0.75);
+--primary4: hsl(100, 0%, 16%, 1);
+--content4: hsl(100, 0%, 112%, 1);
+--accent4: hsl(100, 50%, 46%, 1);
+--good4: hsl(120, 50%, 56%, 1);
+--bad4: hsl(0, 50%, 56%, 1);
+--primary525: hsl(100, 0%, 20%, 0.25);
+--content525: hsl(100, 0%, 116%, 0.25);
+--accent525: hsl(100, 50%, 50%, 0.25);
+--good525: hsl(120, 50%, 60%, 0.25);
+--bad525: hsl(0, 50%, 60%, 0.25);
+--primary550: hsl(100, 0%, 20%, 0.5);
+--content550: hsl(100, 0%, 116%, 0.5);
+--accent550: hsl(100, 50%, 50%, 0.5);
+--good550: hsl(120, 50%, 60%, 0.5);
+--bad550: hsl(0, 50%, 60%, 0.5);
+--primary575: hsl(100, 0%, 20%, 0.75);
+--content575: hsl(100, 0%, 116%, 0.75);
+--accent575: hsl(100, 50%, 50%, 0.75);
+--good575: hsl(120, 50%, 60%, 0.75);
+--bad575: hsl(0, 50%, 60%, 0.75);
+--primary5: hsl(100, 0%, 20%, 1);
+--content5: hsl(100, 0%, 116%, 1);
+--accent5: hsl(100, 50%, 50%, 1);
+--good5: hsl(120, 50%, 60%, 1);
+--bad5: hsl(0, 50%, 60%, 1);
+--primary625: hsl(100, 0%, 24%, 0.25);
+--content625: hsl(100, 0%, 120%, 0.25);
+--accent625: hsl(100, 50%, 54%, 0.25);
+--good625: hsl(120, 50%, 64%, 0.25);
+--bad625: hsl(0, 50%, 64%, 0.25);
+--primary650: hsl(100, 0%, 24%, 0.5);
+--content650: hsl(100, 0%, 120%, 0.5);
+--accent650: hsl(100, 50%, 54%, 0.5);
+--good650: hsl(120, 50%, 64%, 0.5);
+--bad650: hsl(0, 50%, 64%, 0.5);
+--primary675: hsl(100, 0%, 24%, 0.75);
+--content675: hsl(100, 0%, 120%, 0.75);
+--accent675: hsl(100, 50%, 54%, 0.75);
+--good675: hsl(120, 50%, 64%, 0.75);
+--bad675: hsl(0, 50%, 64%, 0.75);
+--primary6: hsl(100, 0%, 24%, 1);
+--content6: hsl(100, 0%, 120%, 1);
+--accent6: hsl(100, 50%, 54%, 1);
+--good6: hsl(120, 50%, 64%, 1);
+--bad6: hsl(0, 50%, 64%, 1);
+--primary725: hsl(100, 0%, 28%, 0.25);
+--content725: hsl(100, 0%, 124%, 0.25);
+--accent725: hsl(100, 50%, 58%, 0.25);
+--good725: hsl(120, 50%, 68%, 0.25);
+--bad725: hsl(0, 50%, 68%, 0.25);
+--primary750: hsl(100, 0%, 28%, 0.5);
+--content750: hsl(100, 0%, 124%, 0.5);
+--accent750: hsl(100, 50%, 58%, 0.5);
+--good750: hsl(120, 50%, 68%, 0.5);
+--bad750: hsl(0, 50%, 68%, 0.5);
+--primary775: hsl(100, 0%, 28%, 0.75);
+--content775: hsl(100, 0%, 124%, 0.75);
+--accent775: hsl(100, 50%, 58%, 0.75);
+--good775: hsl(120, 50%, 68%, 0.75);
+--bad775: hsl(0, 50%, 68%, 0.75);
+--primary7: hsl(100, 0%, 28%, 1);
+--content7: hsl(100, 0%, 124%, 1);
+--accent7: hsl(100, 50%, 58%, 1);
+--good7: hsl(120, 50%, 68%, 1);
+--bad7: hsl(0, 50%, 68%, 1); */

@@ -1,0 +1,39 @@
+
+{
+    setTimeout(() => {
+        window.location.href = '/'
+    }, 1000)
+}
+
+PageTitle: Error 500 - Rue Server
+
+Wrapper
+    height: 100vh
+    width: 100vw
+    position: fixed
+    top: 0
+    left: 0
+    background: black
+    color: white
+    font-family: 'Roboto', sans-serif
+
+    Wrapper
+        width: fit-content
+        padding: 24pt
+
+        Text: Uh oh!
+            margin-bottom: 4pt
+            size: 24pt
+            weight: 600
+            color: coral
+
+        Text: Something went wrong
+            margin-bottom: 4pt
+            size: 16pt
+            weight: 500
+            opacity: 0.8
+
+        Text: Returning home...
+            size: 12pt
+            weight: 500
+            opacity: 0.6
